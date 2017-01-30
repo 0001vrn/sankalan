@@ -1,0 +1,424 @@
+/* TABLE OF CONTENT 
+
+SECTION FIRST -  Main, general rules and resets for bootstrap css
+
+	1.html
+	2.body
+	3.clear bootstrap behavior for A tag
+	4.clear border for IE browsers
+	5.lear bootstrap h1, h2
+	6.some globals used in html files for easier code write
+	7.clear bootstrap buttons behavior
+	8.placeholder color - for those web browsers that use it
+	9.clear bootstrap textfield and inputs behavior
+	10.bootstrap tooltip plugin
+	11.loader for whole page - behavior in loading.css file
+	
+PAGE CONTENT - Whole rules that describe main page 
+
+	1.div for whole page setted to min-100% of window height
+	2.buttons on top right for modal open
+	3.h1 and h2 titles
+	4.divider with icon on bottom from coming very soon text
+	5.text with counter
+	6.email submit
+	7.tag cloud container 
+	8.container with social icons
+	
+	
+BOOTSTRAP MODAL CUSTOMIZE GLOBAL SETTINGS - Rules for bootstrap modal box	
+	
+	I. MODAL ONE 
+	
+	1.modal dialog width and height  - full page
+	2.setted general behavior for modal box - minimal top padding for mobiles fix, word spacing, background, border, and outline reset from bootstrap standard
+	3.top button position behavior
+	4.close button for modal 1
+	5.box with icons and text in modal 1
+	
+	II. MODAL TWO 
+
+	1.modal-title-custom-2 h4
+	2.small text on bottom of title for modal 2
+	3.divider line for modal 2 
+	4.contact form in modal 2
+	5.button close for modal 2
+*/
+
+
+
+/* ######################### SECTION FIRST ############################ */
+
+
+html {width:100%;-webkit-font-smoothing: antialiased;height:100%;}
+
+body{width:100%;height:100%;font-family:'Raleway';margin:0 auto;font-weight:300;position:relative;background:#1c1e29;color:#252b32;}
+
+*{ margin:0; }
+
+/* ######### 3.clear bootstrap behavior for A tag ######### */
+a:focus{box-shadow:none !important;outline:0;}
+a:active:hover{box-shadow:none !important;outline:0;}
+a:hover{box-shadow:none !important;outline:0;}
+a:focus{box-shadow:none !important;outline:0;}
+
+/* ######### 4.clear border for IE browsers ######### */
+img{border:0;}
+
+/* ######### 5.clear bootstrap h1, h2 ######### */
+h1, h2{padding:0;margin:0;}
+
+/* ######### 6.some globals used in html files for easier code write ######### */
+.overflow{overflow:hidden;}
+.text-center{text-align:center;}
+.text-left{text-align:left;}
+.text-right{text-align:right;}
+.nopadding{padding:0 !important;}
+.marginauto{margin:0 auto;}
+.upper{text-transform: uppercase;}
+.marginleftright{margin-left:auto;margin-right:auto;}
+
+/* ######### 7.clear bootstrap buttons behavior ######### */
+.btn:focus{box-shadow:none !important;outline:0;}
+.btn:active:hover{box-shadow:none !important;outline:0;}
+.btn:hover{box-shadow:none !important;outline:0;}
+.btn:focus{box-shadow:none !important;outline:0;}
+
+
+/* ######### 8.placeholder color - for those web browsers that use it ######### */
+/* placeholder color */
+::-webkit-input-placeholder { /* WebKit browsers */
+    color:    #ffffff !important;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+   color:    #ffffff !important;
+   opacity:  1;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+   color:    #ffffff !important;
+   opacity:  1;
+}
+:-ms-input-placeholder { /* Internet Explorer 10+ */
+   color:    #ffffff !important;
+}
+
+/* ######### 9.clear bootstrap textfield and inputs behavior ######### */
+
+input{border-radius:0 !important;}
+input:focus{box-shadow:none !important;outline:0;border:1px solid #72768b !important;border-radius:0 !important;}
+input:active:hover{box-shadow:none !important;outline:0;border:1px solid #72768b !important;border-radius:0 !important;}
+input:hover{box-shadow:none !important;outline:0;border:1px solid #72768b !important;border-radius:0 !important;}
+
+textarea{border:1px solid #ffffff !important;background:transparent !important;resize:none !important;font-weight:400;border-radius:0 !important;
+	/* trasitions for all textarea - for example smooth change color beetween standard state and hover */
+	-webkit-transition: all ease .6s;
+    -moz-transition: all ease .6s;
+    -o-transition: all ease .6s;
+       transition: all ease .6s;	
+}
+textarea:active:hover{box-shadow:none !important;outline:0;border:0 !important;}
+textarea:hover{box-shadow:none !important;outline:0;border:0 !important;}
+textarea:focus{box-shadow:none !important;outline:0;border:0 !important;}
+
+
+/* ######### 10.bootstrap tooltip plugin ######### */
+.tooltip{position:absolute;z-index:99020;display:block;visibility:visible;padding:5px;font-size:13px;font-weight:800;opacity:0;filter:alpha(opacity=0);}
+.tooltip-inner {background-color: #00A8FF;}
+.tooltip.top{margin-top: -5px;}
+.tooltip.top .tooltip-arrow{bottom:0;left:50%;margin-left:-5px;border-left:5px solid transparent;border-right:5px solid transparent;border-top:5px solid #00A8FF}
+.tooltip.bottom{margin-top: 5px;}
+.tooltip.bottom .tooltip-arrow{bottom:0;left:50%;margin-left:-5px;border-left:5px solid transparent;border-right:5px solid transparent;border-bottom:5px solid #00A8FF;}
+
+/* ######### 11.LOADER FOR WHOLE PAGE ######### */
+.loader_container{position:absolute;top:0;bottom:0;left:0;right:0;z-index:19998;background:#000;}
+.loader{position:absolute;top: 50%;bottom:0;left:0;right:0;z-index:19999;}
+
+
+
+
+/* ############################################################### PAGE CONTENT  ################################################################
+   ############################################################################################################################################## */
+
+
+/* ######## 1.div for whole page setted to min-100% of window height ########  */
+/* WARNING - it have setted background for safety reasons if for some reasons jQuery doesn't load. But if jQuery doesn't fail, background is set in main.js file in backstreche plugin */
+
+.c1{min-height:100%;background:#000000; 
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	overflow:hidden;
+	position:relative;
+}
+
+/* ######## 2.buttons on top right for modal open ######## */
+.top-buttons{position:absolute;top:0;right:0;margin-right:20px;margin-top:20px;z-index:10000;}
+.button9-1 img{width:40px;height:40px;}
+.button9-2 img{width:40px;height:40px;}
+
+/* second container for page - if for example You want to put some pattern */
+.c1-pattern{min-height:100%;}
+
+
+/* ######## 3.h1 and h2 titles ######### */
+
+/* <h2>We are</h2> title */
+.c1-title-top h2{font-size:62px;line-height:62px;padding:15px 0px 0px 0px;font-weight:300;color:#373a4a;letter-spacing:-3px;word-spacing:4px;font-family:'Raleway';}
+
+/* <h1>coming very soon</h1> title */
+.c1-title h1{font-size:92px;font-family:'JF Flat Regular';font-weight:300;word-spacing:8px;color:#ffffff;letter-spacing:-4px;line-height:84px;padding:0px 0px 0px 0px;}
+
+/* ########  4.divider with icon on bottom from coming very soon text ########  */
+.c1-divider-container{text-align:center;padding:15px 0px 5px 0px;}
+.c1-divider-top{background:#373a4a;width:120px;height:1px;display:inline-block;}
+.c1-divider-top-2{display:inline-block;vertical-align:4px;}
+.c1-divider-top-2 img{width:50px;height:50px;}
+
+/* ########  5.text with counter ########  */
+.c2-title p{display:inline-block;color:#00A8FF ;font-size:72px;margin:0 !important;}
+/* white text */
+.c2-title{color:#ffffff;margin:0 !important;padding:0;font-size:21px;font-weight:400;font-family:'Raleway';}
+.c2-title p.text{color:#ffffff;padding:0px 0px 0px 0px;font-size:21px;font-weight:400;font-family:'Raleway';margin:0 !important;}
+/* counter text */
+.c2-title p.odometer{padding:0px 4px 0px 4px;}
+/* right "join to them" text */
+.c2-title p.join{color:#00A8FF ;font-size:42px;margin:0 !important;}
+
+/* ########  6.email submit ########  */
+
+/* container for email input */
+.c2-container{padding:15px 0px 35px 0px;}
+
+/* input for email submit with custom behavior on start state */
+.input-email{
+	border:1px solid #373a4a !important;background:transparent !important;font-weight:400;border-radius:0 !important;color:#00A8FF !important;box-shadow:none !important;
+	-webkit-transition: all ease .6s;
+    -moz-transition: all ease .6s;
+    -o-transition: all ease .6s;
+       transition: all ease .6s;
+}
+/* container for submit button */
+.c2-button-container{padding:20px 0px 0px 0px;}
+
+/*button for email submit on main page with custom behavior */
+.btn-email{
+	background:transparent !important;border:1px solid #4e5264;border-radius:0 !important;color:#E5E5E5;
+	-webkit-transition: all ease .6s;
+    -moz-transition: all ease .6s;
+    -o-transition: all ease .6s;
+       transition: all ease .6s;
+}
+.btn-email:hover{color:#72768b;border:1px solid #72768b !important;}
+.btn-email:active:hover{color:#72768b;border:1px solid #72768b !important;}
+.btn-email:focus{color:#72768b;border:1px solid #72768b !important;}
+.btn-email:active{color:#72768b;border:1px solid #72768b !important;}
+
+
+/* ######## 7.tag cloud container ######## */
+.tag-cloud{height:150px;font-weight:300;}
+
+
+/* ######## 8.container with social icons ######## */
+
+/* container for icons */
+.c3-container{padding:25px 0px 15px 0px;text-align:center;}
+
+/* icons behavior */
+.c3-item{
+	display:inline-block;overflow:hidden;
+	-webkit-transition: all ease .6s;
+    -moz-transition: all ease .6s;
+    -o-transition: all ease .6s;
+       transition: all ease .6s;
+	margin:0px 4px 0px 4px;
+}
+.c3-item img{width:40px; height:40px;}
+
+/* set shadow color and border radius for fake box on bottom of icon image */
+.c3-item:hover{box-shadow: 0 0 15px rgba(246,36,89,1);border-radius:199px;cursor:pointer;}
+
+
+
+
+
+
+
+
+
+
+
+/* ################### BOOTSTRAP MODAL CUSTOMIZE GLOBAL SETTINGS  ################################################################
+   ############################################################################################################################## */
+
+/* ########### 1.modal dialog width and height  - full page ########### */
+.modal-dialog {width: 100%;min-height: 100%;margin: 0;}
+.dialog-1, .dialog-2{overflow:hidden;}
+
+/* ########### 2.setted general behavior for modal box - minimal top padding for mobiles fix, word spacing, background, border, and outline reset from bootstrap standard ########### */
+.modal-content-1, .modal-content-2 { 
+	padding:10px 0px 0px 0px;
+	word-spacing:4px; font-weight:400;text-align:center;width:100%;
+	background:transparent !important;color:#80849f !important;border-radius:0 !important;
+	border:0 !important;
+	outline:0 !important;
+}
+
+.modal-body {position:absolute;top:45px; bottom:45px; left:0;right:0;width:100%;}
+.modal-body-content{padding:45px 0px 45px 0px;}
+.modal-footer {position:absolute;bottom:0;left:0;right:0;border:0 !important;}
+
+/* background ( overlay for modal box - here setted to opacity:0 ) - You can change opacity if You don't want to have main page on background when modal is opened */
+.modal-backdrop {background-color: rgba(27,29,41,1);opacity:0 !important;}
+
+/* END MODAL CUSTOMIZE GLOBAL SETTINGS */
+
+
+
+/* ########## 3.top button position behavior ########## */
+.top-button{padding:0px 0px 0px 0px;margin-top:0px;text-align:center;z-index:9999;margin:0 auto;}
+
+
+
+/* ################### MODAL ONE WITH ICONS  ##################################################################################
+   ############################################################################################################################## */
+
+
+/* ########## 4. close button for modal 1 ########## */
+.btn-close-modal{
+	margin:0px auto 0px auto;
+	border:0px solid #00A8FF;color:#ffffff;background:transparent;border-radius:0 !important;
+	-webkit-transition: all ease .6s;
+    -moz-transition: all ease .6s;
+    -o-transition: all ease .6s;
+       transition: all ease .6s;
+}
+.btn-close-modal:hover{border:0px solid #00A8FF;color:#ffffff;background:transparent;border-radius:0 !important;}
+.btn-close-modal:active:hover{border:0px solid #00A8FF;color:#ffffff;background:transparent;border-radius:0 !important;}
+.btn-close-modal:active{border:0px solid #00A8FF;color:#ffffff;background:transparent;border-radius:0 !important;}
+.btn-close-modal:focus{border:0px solid #00A8FF;color:#ffffff;background:transparent;border-radius:0 !important;}
+.btn-close-modal img{width:60px;height:60px;}
+
+
+/* ########## 5.box with icons and text in modal 1 ########## */
+
+/* modal 3/3 icons containers */
+
+/* container top with 3 boxex of icons and text */
+.modal-column-container-1{padding:0px 15px 0px 15px;}
+/* container bottom with 3 boxex of icons and text */
+.modal-column-container-2{padding:5px 15px 5px 15px;}
+
+/* icons */
+.modal-title-custom{}
+.modal-title-custom img{width:72px;height:72px;}
+
+/* text on bottom from icons in modal 1 */
+/* first container text columns */
+.col-content-1{padding:25px 0px 45px 0px;line-height:26px;}
+/* second container text columns */
+.col-content-2{padding:25px 0px 0px 0px;line-height:26px;}
+
+/* columns for icons in modal 1 with scale and fadeIn on start, animation */
+.modal-top-column{padding:0px 15px 0px 15px;transition: all .2s ease-in-out;}
+.modal-top-column:hover{transform: scale(1.1);}
+
+
+/* ################### MODAL TWO WITH CONTACT  ##################################################################################
+   ############################################################################################################################## */
+
+
+/* ########### 1.title for modal 2 ########### */
+.modal-title-custom-2 h4{font-size:42px;color:#ffffff;}
+
+/* ########### 2.small text on bottom of title for modal 2 ########### */
+.col-content-1-1{padding:0px 0px 30px 0px;line-height:26px;}
+.col-content-1-1 b.red{color:#00A8FF;}
+
+
+/* ########### 3.divider line for modal 2 ########### */
+.modal-divider-2{width:120px;height:1px;background:#373a4a;margin:20px auto 25px auto;}
+
+
+/* ########### 4.contact form in modal 2 ########### */
+
+/* container */
+.s1-col-contact{padding:0px 0px 0px 0px;}
+
+/* inputs for name and email */
+.s1-col-contact input{
+	box-shadow:none;font-weight:400;background:transparent !important;border:1px solid #373a4a !important;color:#4be2eb !important;border-radius:0 !important;
+	-webkit-transition: all ease .6s;
+    -moz-transition: all ease .6s;
+    -o-transition: all ease .6s;
+       transition: all ease .6s;
+}
+.s1-col-contact input:focus {box-shadow:none !important;outline:0;background:transparent !important;border:1px solid #72768b !important;border-radius:0 !important;}
+.s1-col-contact input:active:hover{box-shadow:none !important;outline:0;background:transparent !important;border:1px solid #72768b !important;border-radius:0 !important;}
+.s1-col-contact input:hover{box-shadow:none !important;outline:0;background:transparent !important;border:1px solid #72768b !important;border-radius:0 !important;}
+
+/* class for padding for inputs in one line - check in media.css responsive behavior for this inputs */
+.s1-col-md-left{padding:0px 15px 0px 0px}
+.s1-col-md-right{padding:0px 0px 0px 15px}
+
+/* help text block for inputs field in contact form */
+.help-block{text-align:left;color:#72768b}
+
+/* text area for message */
+.s1-col-contact textarea{
+	box-shadow:none;font-weight:400;background:transparent !important;border:1px solid #373a4a !important;color:#4be2eb !important;resize:none;border-radius:0 !important;
+	-webkit-transition: all ease .6s;
+    -moz-transition: all ease .6s;
+    -o-transition: all ease .6s;
+       transition: all ease .6s;
+}
+.s1-col-contact textarea:focus {box-shadow:none !important;outline:0;background:transparent !important;border:1px solid #72768b !important;border-radius:0 !important;}
+.s1-col-contact textarea:active:hover{box-shadow:none !important;outline:0;background:transparent !important;border:1px solid #72768b !important;border-radius:0 !important;}
+.s1-col-contact textarea:hover{box-shadow:none !important;outline:0;background:transparent !important;border:1px solid #72768b !important;border-radius:0 !important;}
+
+/* ########### 5.button close for modal 2 ########### */
+.btn-close-modal-2{
+	margin:10px auto 15px auto;
+	border:1px solid #4e5264;color:#4e5264;background:transparent;border-radius:0 !important;
+	-webkit-transition: all ease .6s;
+    -moz-transition: all ease .6s;
+    -o-transition: all ease .6s;
+       transition: all ease .6s;
+}
+.btn-close-modal-2:hover{border:1px solid #72768b;color:#72768b;background:transparent;border-radius:0 !important;}
+.btn-close-modal-2:active:hover{border:1px solid #72768b;color:#72768b;background:transparent;border-radius:0 !important;}
+.btn-close-modal-2:active{border:1px solid #72768b;color:#72768b;background:transparent;border-radius:0 !important;}
+.btn-close-modal-2:focus{border:1px solid #72768b;color:#72768b;background:transparent;border-radius:0 !important;}
+
+
+
+@media screen and (max-width: 600px){
+	.c1-title h1{font-size:43px !important; }
+}
+
+::-webkit-input-placeholder {
+   color: #00A8FF;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+   color: #00A8FF;  
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+   color: #00A8FF;  
+}
+
+:-ms-input-placeholder {  
+   color: #00A8FF;  
+}
+
+.col-md-6{
+	padding-right: 5px;
+}
+label{
+	color: white !important;
+}
+
+#demo-canvas{
+	position: absolute;
+}
